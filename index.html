@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CATS 2025 – CBMMG | Aulas e Materiais (CATS VII 4º BBM/JF • Presencial)</title>
+
+  <!-- SEO / Open Graph -->
+  <meta name="description" content="CATS 2025 (presencial) — Aulas, objetivos e materiais do Curso de Atendimento a Tentativas de Suicídio (CATS VII) no 4º BBM Juiz de Fora. Oito módulos: fundamentos, psicopatologia, abordagem técnica (gerais/específicos), comunicação dissuasiva, abordagem tática, gestão em ATS e prevenção." />
+  <meta name="keywords" content="CATS, CBMMG, 4º BBM, Juiz de Fora, atendimento a tentativas de suicídio, abordagem técnica, comunicação dissuasiva, abordagem tática, gestão em ATS, prevenção, curso presencial" />
+  <meta property="og:title" content="CATS 2025 – CBMMG | CATS VII 4º BBM/JF (Presencial)" />
+  <meta property="og:description" content="Aulas e materiais dos 8 módulos do CATS VII no 4º BBM Juiz de Fora. Visualize os slides na página e acesse ITO 30 e Boletins." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ricmurtapsicologia.github.io/Curso-ATS/" />
+  <meta property="og:image" content="https://i.pinimg.com/736x/6a/ba/44/6aba4447815cfeec3124c37ba7aac4d9.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="https://i.pinimg.com/736x/6a/ba/44/6aba4447815cfeec3124c37ba7aac4d9.jpg" />
+
+  <!-- Structured Data (LD+JSON) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Curso de Atendimento a Tentativas de Suicídio (CATS) VII",
+    "description":"Curso presencial do CBMMG com oito módulos: fundamentos, psicopatologia, abordagem técnica, comunicação dissuasiva, abordagem tática, gestão em ATS e prevenção.",
+    "provider":{"@type":"Organization","name":"CBMMG","url":"https://www.bombeiros.mg.gov.br/"},
+    "hasCourseInstance":{
+      "@type":"CourseInstance",
+      "courseMode":"InPerson",
+      "location":{"@type":"Place","name":"4º BBM Juiz de Fora"}
+    }
+  }
+  </script>
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.pinimg.com" />
+  <link rel="preload" as="image" href="https://i.pinimg.com/736x/6a/ba/44/6aba4447815cfeec3124c37ba7aac4d9.jpg" fetchpriority="high" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <style>
+    /* ===== Reset e base ===== */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text-1);
+      background:
+        radial-gradient(1200px 600px at 100% -10%,rgba(255,140,0,.25),transparent 60%),
+        radial-gradient(1200px 600px at -10% 110%,rgba(0,51,102,.25),transparent 60%),
+        linear-gradient(180deg,#0b1220 0%,#0f172a 60%,#0b1220 100%);
+      min-height:100vh; overflow-x:hidden;
+    }
+
+    :root{
+      --brand:#ff7f0e; --brand-2:#ff9d47; --primary:#003366;
+      --glass:rgba(255,255,255,.06); --glass-2:rgba(255,255,255,.10);
+      --stroke:rgba(255,255,255,.14); --text-1:#eef2ff; --text-2:#cbd5e1; --text-3:#94a3b8;
+      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; --backdrop: blur(10px);
+    }
+    .light{
+      --glass:#ffffffcc; --glass-2:#fff; --stroke:rgba(0,0,0,.07);
+      --text-1:#0f172a; --text-2:#334155; --text-3:#64748b; background:#f6f7fb;
+    }
+
+    .progress-bar{position:fixed;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--brand),#ffd166);transform-origin:left;transform:scaleX(0);z-index:9999;box-shadow:0 0 10px rgba(255,193,120,.6)}
+
+    /* ===== Splash ===== */
+    #splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(180deg,#001a33,#000814);color:#fff;z-index:9999;text-align:center;padding:16px}
+    #splash h1{font-size:1.2rem;margin-bottom:10px}
+    .spinner{width:38px;height:38px;border:4px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:spin .9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ===== Onboarding ===== */
+    #onboard{position:fixed;inset:0;display:none;place-items:center;padding:20px;background:rgba(2,8,23,.72);backdrop-filter:var(--backdrop);z-index:9998}
+    .onboard-card{max-width:760px;width:min(92vw,760px);background:var(--glass);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow);padding:22px}
+    .onboard-card h3{color:var(--text-1);margin-bottom:6px}
+    .onboard-card p{color:var(--text-2)}
+    .onboard-list{margin:10px 0 2px 18px;color:var(--text-2)}
+    .o-actions{display:flex;gap:10px;margin-top:14px}
+    .btn{background:var(--brand);color:#1b2433;border:none;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer;box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+    .ghost{background:var(--glass);color:var(--text-1);border:1px solid var(--stroke);box-shadow:none}
+
+    /* ===== Navbar ===== */
+    .navbar{position:sticky;top:0;z-index:8888;background:linear-gradient(180deg,rgba(2,8,23,.9),rgba(2,8,23,.65));backdrop-filter:var(--backdrop);border-bottom:1px solid var(--stroke)}
+    .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--text-1);font-weight:800}
+    .brand i{color:var(--brand)}
+    .brand small{color:var(--text-3);font-weight:700}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{color:var(--text-1);text-decoration:none;font-weight:700;font-size:.95rem;padding:8px 10px;border-radius:10px}
+    .nav-links a:hover{background:var(--glass)}
+    .theme-toggle{background:transparent;border:1px solid var(--stroke);color:var(--text-1);border-radius:12px;padding:8px 10px}
+
+    /* ===== Hero ===== */
+    .hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--stroke);background:url('https://i.pinimg.com/736x/6a/ba/44/6aba4447815cfeec3124c37ba7aac4d9.jpg') center/cover no-repeat}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,8,23,.65),rgba(2,8,23,.85));z-index:-1}
+    .hero-inner{max-width:1200px;margin:auto;padding:64px 16px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .hero h1{color:#fff;font-size:clamp(1.9rem,1.1rem + 2.5vw,2.8rem);line-height:1.1;margin-bottom:8px}
+    .hero p{color:var(--text-2);font-size:1.02rem;margin-bottom:0}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid var(--stroke);padding:8px 12px;border-radius:999px;color:#fff;margin-bottom:10px}
+
+    .hero-card{background:var(--glass);backdrop-filter:var(--backdrop);border:1px solid var(--stroke);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
+    .hero-kpi small{color:var(--text-3);display:block}
+    .hero-kpi{background:var(--glass-2);border:1px solid var(--stroke);border-radius:12px;padding:12px;text-align:center}
+    .hero-kpi strong{color:var(--text-1);font-size:1.1rem}
+
+    /* ===== Termômetro (8 módulos) ===== */
+    .progress-wrap{margin-top:10px;background:var(--glass-2);border:1px solid var(--stroke);border-radius:12px;padding:12px}
+    .progress-label{display:flex;justify-content:space-between;color:var(--text-2);font-weight:700;margin-bottom:6px}
+    .thermo{height:12px;border-radius:999px;overflow:hidden;background:linear-gradient(90deg,#ff7f0e 0,#ffd166 0,#2d3748 0)}
+
+    /* ===== Seções ===== */
+    .container{max-width:1200px;margin:auto;padding:32px 16px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}
+    .section-head h2{color:var(--text-1);font-size:1.55rem}
+    .section-head p{color:var(--text-3)}
+
+    /* Cards */
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 4;background:var(--glass);border:2px solid var(--stroke);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s}
+    .card:hover{transform:translateY(-2px)}
+    .media{position:relative;overflow:hidden;aspect-ratio:16/9;background:#0b1220}
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
+    .badge{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.55);color:#fff;font-size:.75rem;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+    .content{padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+    .content h3{color:var(--text-1);font-size:1.06rem}
+    .content p{color:var(--text-2);font-size:.95rem;line-height:1.45}
+    .actions{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+    .btn.small{padding:8px 12px;border-radius:10px;font-size:.92rem}
+    .btn[disabled]{filter:grayscale(1) opacity(.6);cursor:not-allowed}
+
+    /* Materiais */
+    details.materials{background:var(--glass);border:1px solid var(--stroke);border-radius:var(--radius);padding:12px 14px;margin-top:8px}
+    details.materials summary{cursor:pointer;color:var(--text-1);font-weight:800;list-style:none}
+    .mat-links{display:grid;gap:10px;margin-top:12px}
+    .mat-links a{text-decoration:none;background:linear-gradient(180deg,var(--brand),var(--brand-2));color:#111;padding:10px 12px;border-radius:10px;font-weight:800}
+
+    /* Vídeos */
+    .video-grid .card{grid-column:span 4}
+    .video-embed{width:100%;aspect-ratio:16/9;border:0;border-bottom:1px solid var(--stroke)}
+    .video-title{padding:10px 14px 0;color:var(--text-1);font-weight:700}
+    .video-desc{padding:6px 14px 12px;color:var(--text-2)}
+
+    /* Footer */
+    footer{margin-top:16px;background:linear-gradient(180deg,rgba(2,8,23,.9),rgba(2,8,23,.95));border-top:1px solid var(--stroke);color:#e5e7eb}
+    .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+    .footer-grid>div{min-width:0}
+    footer h4{color:#ffe08a;margin-bottom:8px}
+    footer a{color:#fff;text-decoration:none}
+    footer a:hover{color:#ffe08a}
+    .footer-bottom{margin-top:8px;padding-top:10px;border-top:1px dashed var(--stroke);color:#text-3;text-align:center}
+    .footer-grid .cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    .footer-grid .cta .btn{display:inline-flex;margin:0}
+
+    /* FABs */
+    .fab{position:fixed;right:18px;bottom:18px;z-index:9990;background:linear-gradient(180deg,#25d366,#1fa753);color:#042;display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:800;box-shadow:var(--shadow)}
+    .fab-danger{right:auto;left:18px;background:linear-gradient(180deg,#ef4444,#b91c1c);color:#fff}
+    .to-top{position:fixed;right:18px;bottom:84px;z-index:9989;background:var(--glass);backdrop-filter:var(--backdrop);border:1px solid var(--stroke);color:var(--text-1);padding:8px 10px;border-radius:12px;font-weight:800;cursor:pointer}
+
+    /* ===== Modais ===== */
+    dialog{border:none;border-radius:18px;background:var(--glass);backdrop-filter:var(--backdrop);box-shadow:var(--shadow)}
+    dialog:not([open]){display:none !important;pointer-events:none}
+    dialog.modal{max-width:min(92vw,860px);width:860px;padding:0}
+    dialog.modal::backdrop{background:rgba(2,8,23,.72);backdrop-filter:blur(3px)}
+    .modal-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--stroke)}
+    .modal-body{padding:14px 16px;color:var(--text-2);line-height:1.55}
+    .modal-actions{padding:12px 16px;border-top:1px solid var(--stroke);display:flex;gap:10px;justify-content:flex-end}
+
+    /* ===== Viewer (2/3 da tela + botões) ===== */
+    dialog.viewer{max-width:96vw;width:96vw}
+    .viewer .layout{
+      display:grid;
+      grid-template-columns:1fr 2fr; /* 1/3 botões | 2/3 slide */
+      gap:12px;
+      align-items:stretch;
+      padding:12px 16px;
+    }
+    .viewer .controls{
+      display:flex;flex-direction:column;gap:10px;align-items:stretch;justify-content:flex-start
+    }
+    .viewer .frame-wrap{
+      width:100%;aspect-ratio:16/9;position:relative;background:#0b1220;border:1px solid var(--stroke);border-radius:12px;overflow:hidden
+    }
+    .viewer iframe{width:100%;height:100%;border:0;background:#000}
+    .viewer .tip{color:var(--text-3);font-size:.9rem;margin-top:auto}
+
+    /* Toast */
+    .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--glass);border:1px solid var(--stroke);backdrop-filter:var(--backdrop);color:var(--text-1);padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:10000}
+    .toast.show{display:block;animation:fade 2.2s ease}
+    @keyframes fade{0%{opacity:0;transform:translate(-50%,10px)}10%,90%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,10px)}}
+
+    @media (max-width: 980px){
+      .hero-inner{grid-template-columns:1fr}
+      .card,.video-grid .card{grid-column:span 12}
+      .footer-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .container{padding:26px 14px}
+      .viewer .layout{grid-template-columns:1fr;gap:8px}
+      .viewer .controls{flex-direction:row;flex-wrap:wrap}
+      .viewer .tip{width:100%}
+    }
+  </style>
+
+  <!-- Google Analytics (defer) -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-38D052F915"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-38D052F915');
+  </script>
+</head>
+<body>
+  <div class="progress-bar" id="progress"></div>
+
+  <!-- Splash -->
+  <div id="splash" role="status" aria-live="polite">
+    <h1>Carregando plataforma…</h1>
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <!-- Onboarding -->
+  <div id="onboard" role="dialog" aria-modal="true" aria-labelledby="ob-title">
+    <div class="onboard-card" role="document">
+      <h3 id="ob-title">Bem-vindo(a) ao CATS 2025 – CBMMG</h3>
+      <p>Esta página reúne <b>Aulas</b>, <b>Objetivos</b> e <b>Materiais</b> do CATS 2025 (formato presencial). CATS VII 4º BBM Juiz de Fora.</p>
+      <ul class="onboard-list">
+        <li>Clique em <b>Acessar aula</b> para abrir os slides nesta página.</li>
+        <li>Use <b>Anterior</b>, <b>Próximo</b> e <b>Encerrar</b>.</li>
+        <li>Consulte <b>Materiais Complementares</b> (ITO 30 e Boletins).</li>
+        <li>Em crise, o <b>Botão do Pânico</b> liga para <b>188 (CVV)</b>.</li>
+      </ul>
+      <div class="o-actions">
+        <button class="btn ghost" id="ob-skip"><i class="ri-skip-forward-mini-fill"></i> Pular</button>
+        <button class="btn" id="ob-next">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Navegação">
+    <div class="nav-inner">
+      <div class="brand">
+        <i class="ri-fire-fill"></i>
+        <span>CATS 2025 – CBMMG</span>
+        <small>CATS VII 4º BBM (Juiz de Fora) • Presencial</small>
+      </div>
+      <div class="nav-links" role="menubar">
+        <a role="menuitem" href="#aulas">Aulas</a>
+        <a role="menuitem" href="#materiais">Materiais</a>
+        <a role="menuitem" href="#videos">Vídeos</a>
+        <a role="menuitem" href="#contatos">Contatos</a>
+      </div>
+      <div class="nav-cta" style="display:flex;gap:10px;align-items:center">
+        <button class="theme-toggle" id="themeBtn" aria-pressed="false" title="Alternar tema">
+          <i class="ri-sun-line" id="themeIcon"></i>
+        </button>
+        <a class="btn" href="#aulas"><i class="ri-play-fill"></i> Começar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="pill"><i class="ri-shield-cross-line"></i> Curso de Atendimento a Tentativas de Suicídio</span>
+        <h1>Plataforma de apoio – CATS VII 4º BBM/JF</h1>
+        <p>Conteúdo de apoio complementar ao curso presencial do CATS VII, com foco em <b>comunicação dissuasiva técnico-humanizada</b>, <b>abordagem tática especializada</b>, <b>gestão do atendimento a tentativas de suicídio</b> e <b>prevenção em saúde mental na caserna</b>.</p>
+      </div>
+
+      <aside class="hero-card" aria-label="Indicadores & progresso">
+        <div class="hero-grid">
+          <div class="hero-kpi"><small>Módulos</small><strong id="kpi-modulos">8 módulos</strong></div>
+          <div class="hero-kpi"><small>Formato</small><strong>Presencial</strong></div>
+          <div class="hero-kpi"><small>Edição / Local</small><strong>CATS VII • 4º BBM/JF</strong></div>
+          <div class="hero-kpi"><small>Extras</small><strong>Prevenção + Projeto</strong></div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span><i class="ri-bar-chart-box-line"></i> Progresso dos módulos</span>
+            <span><b id="progressLabel">0</b>/8</span>
+          </div>
+          <div class="thermo" id="thermo"></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Aulas -->
+    <section id="aulas" class="container">
+      <div class="section-head">
+        <div>
+          <h2><i class="ri-book-2-line"></i> Aulas</h2>
+          <p>O <b>CATS VII</b> aborda <b>comunicação dissuasiva</b>, <b>abordagem técnica</b> e <b>gestão de ATS</b>, com base em <i>“Girando a Ampulheta da Vida”</i>. O curso integra <b>psicopatologia aplicada</b> e <b>prevenção em saúde mental na caserna</b>, com foco na atuação segura e humanizada.</p>
+        </div>
+      </div>
+
+      <div class="grid" id="cards">
+        <!-- 1 -->
+        <article class="card" data-module="1" data-title="Aspectos Gerais do Comportamento Suicida">
+          <div class="media">
+            <span class="badge">Módulo 1</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/35/c5/64/35c5641e66c602835ca66dbcde48b5ff.jpg" alt="Aspectos Gerais do Comportamento Suicida" />
+          </div>
+          <div class="content">
+            <h3>Módulo 1: Aspectos Gerais do Comportamento Suicida</h3>
+            <p>Conceitos, dados, mitos e sinais de alerta.</p>
+            <div class="actions">
+              <a class="btn small open-slide" data-slide-id="1XbZNfO9M-yUR-Nvow2-u46TvCC15sR6T" href="https://docs.google.com/presentation/d/1XbZNfO9M-yUR-Nvow2-u46TvCC15sR6T/view">Acessar aula</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card" data-module="2" data-title="Psicopatologia do Comportamento Suicida">
+          <div class="media">
+            <span class="badge">Módulo 2</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/e1/5b/5b/e15b5b373c167a2b811e6320a1a9948f.jpg" alt="Psicopatologia do Comportamento Suicida" />
+          </div>
+          <div class="content">
+            <h3>Módulo 2: Psicopatologia do Comportamento Suicida</h3>
+            <p>Estruturas clínicas, comorbidades e avaliação de risco.</p>
+            <div class="actions">
+              <a class="btn small open-slide" data-slide-id="1eZhr-fsON3t8NDkG8Fji3_mXIzKnhiZj" href="https://docs.google.com/presentation/d/1eZhr-fsON3t8NDkG8Fji3_mXIzKnhiZj/view">Acessar aula</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card" data-module="3" data-title="Abordagem Técnica: Aspectos Gerais">
+          <div class="media">
+            <span class="badge">Módulo 3</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/2e/ed/12/2eed12b05b991475772e62f9ec623a1b.jpg" alt="Abordagem Técnica: Aspectos Gerais" />
+          </div>
+          <div class="content">
+            <h3>Módulo 3: Abordagem Técnica: Aspectos Gerais</h3>
+            <p>Comunicação, segurança e aproximação.</p>
+            <div class="actions">
+              <a class="btn small open-slide" data-slide-id="1N_KATaJiVIMsFyXBHMJ44nkwhkfdQvJU" href="https://docs.google.com/presentation/d/1N_KATaJiVIMsFyXBHMJ44nkwhkfdQvJU/view">Acessar aula</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card" data-module="4" data-title="Abordagem Técnica: Aspectos Específicos">
+          <div class="media">
+            <span class="badge">Módulo 4</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/bc/25/c0/bc25c0bd4fb2c428bcd846bd15a643d0.jpg" alt="Abordagem Técnica: Aspectos Específicos" />
+          </div>
+          <div class="content">
+            <h3>Módulo 4: Abordagem Técnica: Aspectos Específicos</h3>
+            <p>Ajustes por cenário, contenção e pós-abordagem.</p>
+            <div class="actions">
+              <a class="btn small open-slide" data-slide-id="1wE_p3OJjCrRV6S1JN3G6z27L93mDlwUd" href="https://docs.google.com/presentation/d/1wE_p3OJjCrRV6S1JN3G6z27L93mDlwUd/view">Acessar aula</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card" data-module="5" data-title="Abordagem Técnica: Comunicação Dissuasiva">
+          <div class="media">
+            <span class="badge">Módulo 5</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/8f/86/b3/8f86b3256f3b7b40dcdb411e1bd7c175.jpg" alt="Abordagem Técnica: Comunicação Dissuasiva" />
+          </div>
+          <div class="content">
+            <h3>Módulo 5: Abordagem Técnica: Comunicação Dissuasiva</h3>
+            <p>Rapport, validação, linguagem e redução de ambivalência.</p>
+            <div class="actions">
+              <button class="btn small" disabled title="Em manutenção"><i class="ri-tools-line"></i> Em manutenção</button>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card" data-module="6" data-title="Abordagem Tática">
+          <div class="media">
+            <span class="badge">Módulo 6</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/8f/86/b3/8f86b3256f3b7b40dcdb411e1bd7c175.jpg" alt="Abordagem Tática" />
+          </div>
+          <div class="content">
+            <h3>Módulo 6: Abordagem Tática</h3>
+            <p>Isolamento, tempo, negociação, regras de engajamento e segurança.</p>
+            <div class="actions">
+              <button class="btn small" disabled title="Em manutenção"><i class="ri-tools-line"></i> Em manutenção</button>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="card" data-module="7" data-title="Gestão em ATS">
+          <div class="media">
+            <span class="badge">Módulo 7</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/1200x/c8/96/f7/c896f763d4cde9bf2932cc886e2e2b98.jpg" alt="Gestão em ATS" />
+          </div>
+          <div class="content">
+            <h3>Módulo 7: Gestão em ATS</h3>
+            <p>Gestão da ocorrência com <b>matriz de trabalho</b>, <b>isolamento do perímetro</b> e <b>condução do tentante para local seguro</b>. Fluxos, indicadores e posvenção.</p>
+            <div class="actions">
+              <button class="btn small" disabled title="Em manutenção"><i class="ri-tools-line"></i> Em manutenção</button>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="card" data-module="8" data-title="Prevenção">
+          <div class="media">
+            <span class="badge">Módulo 8</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/originals/1f/68/67/1f6867294fd6c1b101f2fdab626e658b.jpg" alt="Prevenção" />
+          </div>
+          <div class="content">
+            <h3>Módulo 8: Prevenção</h3>
+            <p>Estratégias baseadas em evidências, entre pares e fluxos institucionais.</p>
+            <div class="actions">
+              <a class="btn small open-slide" data-slide-id="12PpmEAJo3aw_3sGfZRHHQKHKg57wAZvv" href="https://docs.google.com/presentation/d/12PpmEAJo3aw_3sGfZRHHQKHKg57wAZvv/view">Acessar aula</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+              <button class="btn small complete">Concluir módulo</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJETO: Girando a Ampulheta da Vida -->
+        <article class="card" data-module="proj" data-title="Girando a Ampulheta da Vida">
+          <div class="media">
+            <span class="badge">Projeto</span>
+            <img loading="lazy" decoding="async" src="https://i.pinimg.com/736x/46/a2/33/46a2335ebc2074b6df9a9774ce9cfd5d.jpg" alt="Girando a Ampulheta da Vida" />
+          </div>
+          <div class="content">
+            <h3>Girando a Ampulheta da Vida</h3>
+            <p>Podcasts e materiais complementares para ampliar a aprendizagem e a prática em ATS.</p>
+            <div class="actions">
+              <a class="btn small" target="_blank" rel="noopener" href="https://ricmurtapsicologia.github.io/Podcast-ATS-CBMMG/"><i class="ri-external-link-line"></i> Acessar projeto</a>
+              <button class="btn small ghost objectives">Ver objetivos</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Materiais -->
+      <div id="materiais" style="margin-top:18px">
+        <details class="materials">
+          <summary><i class="ri-archive-2-line"></i> Materiais Complementares</summary>
+          <div class="mat-links">
+            <a href="https://drive.google.com/file/d/1QW7Wzr6GgBHctNKf7oqTC_I1D0OMHxfA/view?usp=sharing" target="_blank" rel="noopener">Instrução Técnica Operacional nº 30 (ITO 30)</a>
+            <a href="https://drive.google.com/file/d/19G98R3O4MKzOSiEWULyv13u4e_t_L57p/view?usp=sharing" target="_blank" rel="noopener">Boletim Epidemiológico nº 15 (2019)</a>
+            <a href="https://drive.google.com/file/d/1iQIiE9gXo64CtaxMDdpeoaZ9Jp3TqLW1/view?usp=sharing" target="_blank" rel="noopener">Boletim Epidemiológico nº 30 (2017)</a>
+            <a href="https://drive.google.com/file/d/142Xo_BKypSz7PInWKay5y-8X--O8gYjO/view?usp=sharing" target="_blank" rel="noopener">Boletim Epidemiológico nº 33 (2021)</a>
+            <a href="https://drive.google.com/file/d/1CmZ5pAgDNk7OhPZkM0mgHANYj9PTVaBa/view?usp=sharing" target="_blank" rel="noopener">Boletim Epidemiológico nº 55 (2024)</a>
+            <a href="https://play.google.com/store/apps/details?id=es.aciliainternet.prevensuic&hl=pt_BR&pli=1" target="_blank" rel="noopener">Aplicativo PREVENSUIC (Google Play)</a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section id="videos" class="container">
+      <div class="section-head">
+        <div>
+          <h2><i class="ri-movie-line"></i> Vídeos Selecionados</h2>
+          <p>Repertório de apoio para aprofundar conceitos e práticas.</p>
+        </div>
+      </div>
+      <div class="grid video-grid">
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/gJBlY3opAVU" title="Suicídio explicado - Nerdologia" allowfullscreen></iframe>
+          <div class="video-title">Suicídio explicado | Nerdologia</div>
+          <div class="video-desc">Panorama didático sobre fatores de risco, proteção e mitos.</div>
+        </article>
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/N88STTQVaE8" title="CVV/UNICEF - O que evitar" allowfullscreen></iframe>
+          <div class="video-title">CVV/UNICEF: O que evitar</div>
+          <div class="video-desc">Comunicação responsável e recomendações práticas.</div>
+        </article>
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/VW3mvMz5AXs" title="CVV/UNICEF - Quebrando tabus" allowfullscreen></iframe>
+          <div class="video-title">CVV/UNICEF: Quebrando tabus</div>
+          <div class="video-desc">Desconstrução de mitos e estigmas.</div>
+        </article>
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/YmIIiuaJgkk" title="CVV/UNICEF - Situações de risco" allowfullscreen></iframe>
+          <div class="video-title">CVV/UNICEF: Situações de risco</div>
+          <div class="video-desc">Fatores que aumentam vulnerabilidade e sinais de alerta.</div>
+        </article>
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/BbJi72PmDXI" title="Prevenção entre jovens" allowfullscreen></iframe>
+          <div class="video-title">CVV/UNICEF: Prevenção entre jovens</div>
+          <div class="video-desc">Abordagens específicas para jovens.</div>
+        </article>
+        <article class="card">
+          <iframe class="video-embed" loading="lazy" src="https://www.youtube.com/embed/w6qQW5neQek" title="Primeiros cuidados emocionais" allowfullscreen></iframe>
+          <div class="video-title">Diógenes Munhoz: Primeiros cuidados</div>
+          <div class="video-desc">Boas práticas iniciais em crises.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer id="contatos">
+    <div class="container footer-grid">
+      <div>
+        <h4>Links úteis</h4>
+        <ul style="list-style:none;line-height:1.9">
+          <li><a href="https://www.instagram.com/bombeirosmg/?theme=dark" target="_blank" rel="noopener"><i class="ri-instagram-line"></i> Instagram do CBMMG</a></li>
+          <li><a href="https://cvv.org.br/" target="_blank" rel="noopener"><i class="ri-lifebuoy-line"></i> Centro de Valorização da Vida (CVV)</a></li>
+          <li><a href="https://ricmurtapsicologia.github.io/Guia-de-Apoio-a-Saude-Mental/" target="_blank" rel="noopener"><i class="ri-bookmark-3-line"></i> Guia de Apoio à Saúde Mental</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><strong>Email:</strong> <a href="mailto:richelmy.pinto@bombeiros.mg.gov.br">richelmy.pinto@bombeiros.mg.gov.br</a></p>
+        <p><strong>Telefone:</strong> <a href="tel:+5535984640729">(35) 98464-0729</a></p>
+      </div>
+      <div class="cta">
+        <h4>Envie sua sugestão</h4>
+        <p>Deixe sua ideia pelo WhatsApp:</p>
+        <p><a class="btn" href="https://wa.me/5535984640729?text=Olá,%20tenho%20uma%20sugestão!" target="_blank" rel="noopener"><i class="ri-whatsapp-line"></i> Contribuir agora</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      © 2025 Corpo de Bombeiros Militar de Minas Gerais — Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- FABs -->
+  <a class="fab" href="https://wa.me/5535984640729?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20CATS%202025." target="_blank" rel="noopener">
+    <i class="ri-whatsapp-line"></i> Suporte
+  </a>
+  <a class="fab fab-danger" id="panicCVV" href="tel:188" title="Botão do Pânico – CVV 188">
+    <i class="ri-alert-line"></i> CVV 188
+  </a>
+  <button id="toTop" class="to-top" title="Voltar ao topo"><i class="ri-arrow-up-line"></i> Topo</button>
+
+  <!-- Modal Objetivos -->
+  <dialog id="modal" class="modal" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <strong id="modalTitle" style="color:var(--text-1)"><i class="ri-flag-line"></i> Objetivos do módulo</strong>
+      <button id="modalClose" class="theme-toggle" aria-label="Fechar"><i class="ri-close-line"></i></button>
+    </div>
+    <div id="modalBody" class="modal-body"></div>
+    <div class="modal-actions">
+      <button class="btn ghost" id="modalOk">OK</button>
+    </div>
+  </dialog>
+
+  <!-- Viewer de Slides -->
+  <dialog id="slidesViewer" class="modal viewer" aria-labelledby="slidesTitle">
+    <div class="modal-head">
+      <strong id="slidesTitle" style="color:var(--text-1)"><i class="ri-slideshow-2-line"></i> Apresentação</strong>
+      <button id="closeX" class="theme-toggle" aria-label="Fechar"><i class="ri-close-line"></i></button>
+    </div>
+    <div class="layout">
+      <div class="controls">
+        <button id="prevSlide" class="btn ghost" title="Anterior"><i class="ri-arrow-left-line"></i> Anterior</button>
+        <button id="nextSlide" class="btn" title="Próximo">Próximo <i class="ri-arrow-right-line"></i></button>
+        <a id="openExternal" class="btn ghost" target="_blank" rel="noopener"><i class="ri-external-link-line"></i> Abrir no Google Slides</a>
+        <button id="slidesClose" class="btn ghost" aria-label="Encerrar"><i class="ri-close-circle-line"></i> Encerrar</button>
+        <span class="tip">Dica: clique no slide e use as setas ⟵ ⟶.</span>
+      </div>
+      <div class="frame-wrap">
+        <iframe id="slidesFrame" title="Visualização de slides do CATS 2025" allow="autoplay; fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    /* ===== Tema ===== */
+    const body = document.body, themeBtn = document.getElementById('themeBtn'), themeIcon = document.getElementById('themeIcon');
+    const storedTheme = localStorage.getItem('theme') || 'dark';
+    if(storedTheme === 'light'){ body.classList.add('light'); themeIcon.className='ri-moon-line'; themeBtn.setAttribute('aria-pressed','true'); }
+    themeBtn.addEventListener('click', ()=>{
+      const isLight = body.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeIcon.className = isLight ? 'ri-moon-line' : 'ri-sun-line';
+      themeBtn.setAttribute('aria-pressed', String(isLight));
+    });
+
+    /* ===== Splash ===== */
+    window.addEventListener('load', ()=>{
+      const splash = document.getElementById('splash');
+      const end = ()=> splash && (splash.style.display='none');
+      const fast = setTimeout(end, 800);
+      setTimeout(()=>{ clearTimeout(fast); end(); onboarding(); }, 4000);
+    });
+    function onboarding(){
+      if(!localStorage.getItem('ats_onboarded')){
+        const ob = document.getElementById('onboard');
+        const close = ()=>{ ob.style.display='none'; localStorage.setItem('ats_onboarded','1'); }
+        ob.style.display='grid';
+        document.getElementById('ob-skip').addEventListener('click', close);
+        document.getElementById('ob-next').addEventListener('click', close);
+      }
+    }
+
+    /* ===== Scroll progress ===== */
+    const progress = document.getElementById('progress');
+    const setProgress = ()=>{
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop)/(h.scrollHeight - h.clientHeight);
+      progress.style.transform = `scaleX(${Math.max(0,Math.min(1,scrolled))})`;
+    };
+    document.addEventListener('scroll', setProgress, {passive:true}); setProgress();
+
+    /* ===== Objetivos (inclui PROJETO) ===== */
+    const objectivesMap = {
+      "1":['Compreender o conceito e a abrangência do comportamento suicida.','Conhecer dados estatísticos atuais e grupos mais vulneráveis.','Entender fatores históricos, culturais e impacto social.','Refletir sobre mitos e julgamentos equivocados.'],
+      "2":['Entender a natureza multifatorial do suicídio.','Reconhecer prejuízo de julgamento/decisão.','Identificar fatores de risco e gatilhos.','Relacionar transtornos à cena operacional.'],
+      "3":['Diferenciar abordagem técnica e tática em ATS.','Aplicar condutas adequadas no diálogo.','Evitar atitudes que elevam risco.','Executar protocolos pré, durante e pós.'],
+      "4":['Integrar instituições parceiras.','Entrada segura com avaliação estrutural.','Contenção ética quando necessária.','Pós-ocorrência, perícia e REDS.'],
+      "5":['Estabelecer rapport e validação.','Técnicas dissuasivas e silêncio funcional.','Redução de ambivalência.','Evitar armadilhas verbais.'],
+      "6":['Isolamento, tempo e negociação.','Alinhamento com comando e inteligência.','Regras de engajamento.','Proteção de terceiros e avaliação dinâmica.'],
+      "7":['Matriz de trabalho e papéis.','Isolamento do perímetro e segurança.','Condução do tentante para local seguro.','Indicadores e posvenção.'],
+      "8":['Reconhecer sinais entre colegas.','Autorregulação e autocuidado.','Intervenção ética entre pares.','Acionamento de fluxos institucionais.'],
+      "proj":['Ampliar aprendizagem com podcasts temáticos.','Conectar teoria à prática com casos e entrevistas.','Estimular reflexão e atualização contínua.','Centralizar materiais complementares e referências.']
+    };
+    const modal = document.getElementById('modal');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+    const modalOk = document.getElementById('modalOk');
+    document.querySelectorAll('.objectives').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const card = e.target.closest('.card');
+        const idx = (card?.dataset.module || "0");
+        const list = objectivesMap[idx] || ['Objetivos deste conteúdo.'];
+        modalBody.innerHTML = '<ul style="margin-left:1rem">'+list.map(i=>`<li style="margin:.4rem 0">${i}</li>`).join('')+'</ul>';
+        modal.showModal();
+      });
+    });
+    const closeModal = ()=>{ modal.close(); modal.removeAttribute('open'); };
+    modalClose.addEventListener('click', closeModal); modalOk.addEventListener('click', closeModal);
+    modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ closeModal(); closeViewer(); }});
+
+    /* ===== Termômetro (8 módulos) ===== */
+    const thermo = document.getElementById('thermo');
+    const label = document.getElementById('progressLabel');
+    const TOTAL = 8;
+    const key = 'ats_progress_v6';
+    let progressSet = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+    function updateThermo(){
+      progressSet = new Set([...progressSet].filter(n=>['1','2','3','4','5','6','7','8'].includes(String(n))));
+      const done = progressSet.size;
+      const pct = Math.round((done/TOTAL)*100);
+      thermo.style.background = `linear-gradient(90deg,#ff7f0e 0,#ffd166 ${pct}%, #2d3748 ${pct}%)`;
+      label.textContent = done;
+      document.querySelectorAll('#cards .card').forEach(c=>{
+        const id = c.dataset.module;
+        c.style.borderColor = id && progressSet.has(id) ? 'rgba(255,193,120,.9)' : 'var(--stroke)';
+      });
+    }
+    updateThermo();
+    document.querySelectorAll('.complete').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const id = e.target.closest('.card').dataset.module;
+        if(!id) return;
+        if(progressSet.has(id)) progressSet.delete(id); else progressSet.add(id);
+        localStorage.setItem(key, JSON.stringify([...progressSet]));
+        updateThermo();
+      });
+    });
+
+    /* ===== Botão Topo ===== */
+    document.getElementById('toTop').addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    /* ===== Viewer (Prev/Next funcionais) ===== */
+    const slidesViewer = document.getElementById('slidesViewer');
+    const slidesFrame  = document.getElementById('slidesFrame');
+    const slidesTitle  = document.getElementById('slidesTitle');
+    const openExternal = document.getElementById('openExternal');
+    const prevSlideBtn = document.getElementById('prevSlide');
+    const nextSlideBtn = document.getElementById('nextSlide');
+    const slidesClose  = document.getElementById('slidesClose');
+    const closeX       = document.getElementById('closeX');
+
+    let currentDeck = { id:null, index:1 };
+
+    const baseEmbed = id => `https://docs.google.com/presentation/d/${id}/embed?start=false&loop=false&delayms=60000&rm=minimal`;
+    const viewUrl   = id => `https://docs.google.com/presentation/d/${id}/view`;
+    const srcWithIndex = (id, i) => `${baseEmbed(id)}#slide=id.p${Math.max(1,i)}`;
+
+    function openViewer(id, title){
+      currentDeck = { id, index:1 };
+      slidesTitle.textContent = `Apresentação – ${title}`;
+      slidesFrame.src = srcWithIndex(id, currentDeck.index);
+      openExternal.href = viewUrl(id);
+      slidesViewer.showModal();
+      document.documentElement.style.overflow='hidden';
+      setTimeout(()=>slidesFrame.focus(), 150);
+    }
+    function closeViewer(){
+      slidesFrame.src='about:blank';
+      if(slidesViewer.open){ slidesViewer.close(); }
+      slidesViewer.removeAttribute('open');
+      document.documentElement.style.overflow='';
+    }
+
+    document.querySelectorAll('a.open-slide').forEach(a=>{
+      a.addEventListener('click', ev=>{
+        ev.preventDefault();
+        const id = a.getAttribute('data-slide-id');
+        const title = a.closest('.card')?.querySelector('h3')?.textContent || 'CATS 2025';
+        openViewer(id, title);
+      }, {passive:false});
+    });
+
+    prevSlideBtn.addEventListener('click', ()=>{
+      if(!currentDeck.id) return;
+      currentDeck.index = Math.max(1, currentDeck.index - 1);
+      slidesFrame.src = srcWithIndex(currentDeck.id, currentDeck.index);
+    });
+    nextSlideBtn.addEventListener('click', ()=>{
+      if(!currentDeck.id) return;
+      currentDeck.index = currentDeck.index + 1;
+      slidesFrame.src = srcWithIndex(currentDeck.id, currentDeck.index);
+    });
+
+    [slidesClose, closeX].forEach(b=> b.addEventListener('click', closeViewer));
+    slidesViewer.addEventListener('click', e=>{ if(e.target===slidesViewer) closeViewer(); });
+
+    /* ===== CVV ===== */
+    document.getElementById('panicCVV').addEventListener('click', ()=>{ try{ window.location.href='tel:188'; }catch{} });
+
+    /* ===== Performance extra ===== */
+    document.querySelectorAll('img[loading="lazy"]').forEach(img=> img.decoding='async');
+  </script>
+
+  <!-- Tawk.to -->
+  <script type="text/javascript">
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true; s1.src='https://embed.tawk.to/67e3528ffee510190b03d2cc/1in7vl05n';
+      s1.charset='UTF-8'; s1.setAttribute('crossorigin','*'); s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+</body>
+</html>
